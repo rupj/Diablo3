@@ -8,7 +8,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class D3BNetHeroSkills {
 	
 	private List<D3BNetHeroActiveSkill> active;
-	// private List<T> passive;
+	private List<D3BNetHeroPassiveSkill> passive;
+
+	public List<D3BNetHeroPassiveSkill> getPassive() {
+		return passive;
+	}
 
 	public List<D3BNetHeroActiveSkill> getActive() {
 		return active;

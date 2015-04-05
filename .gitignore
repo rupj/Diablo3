@@ -1,5 +1,3 @@
 target
-bin
-.settings
-.classpath
-.project
+.idea
+Diablo3.iml

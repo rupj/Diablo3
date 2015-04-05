@@ -5,7 +5,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class D3BNetHeroBase {
-	
+
+	private Integer id;
+	private String name;
+	@JsonProperty("class")
+	private String klass;
+	private Integer level;
+	private Integer paragonLevel;
+	private Boolean hardcore;
+	private Boolean dead;
+	private Integer gender;
+	private Boolean seasonal;
+	@JsonProperty("last-updated")
+	private Integer lastUpdated;
+
 	public Integer getId() {
 		return id;
 	}
@@ -48,7 +61,8 @@ public class D3BNetHeroBase {
 	
 	@Override
 	public String toString() {
-		String s = "Hero:" +
+
+		return "Hero:" +
 	     "\n\tid: " + this.id +
 	     "\n\tname: " + this.name +
 	     "\n\tclass: " + this.klass +
@@ -60,21 +74,5 @@ public class D3BNetHeroBase {
 	     "\n\tseasonal: " + this.seasonal +
 	     "\n\tlastUpdated: " + this.lastUpdated
 	     ;
-		
-		return s;
 	}
-
-	private Integer id;
-	private String name;
-	@JsonProperty("class")
-	private String klass;
-	private Integer level;
-	private Integer paragonLevel;
-	private Boolean hardcore;
-	private Boolean dead;
-	private Integer gender;
-	private Boolean seasonal;
-	@JsonProperty("last-updated")
-	private Integer lastUpdated;
-
 }

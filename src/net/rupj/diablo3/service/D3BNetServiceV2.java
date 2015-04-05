@@ -9,7 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class D3BNetServiceV2 {
-	
+
+	@Autowired
+	private RestTemplate restTemplate;
+
 	public D3BNetServiceV2() {
 		System.out.println("Creating bean D3BNetServiceV2");
 	}
@@ -19,8 +22,7 @@ public class D3BNetServiceV2 {
 				"http://us.battle.net/api/d3/profile/%s/", 
 				profileId);
 		
-		D3BNetProfile profile = restTemplate.getForObject(urlString, D3BNetProfile.class);
-		return profile;
+		return restTemplate.getForObject(urlString, D3BNetProfile.class);
 	}
 	
 	public D3BNetHero retrieveHeroById(String profileId, Integer heroId) {
@@ -29,10 +31,6 @@ public class D3BNetServiceV2 {
 				profileId, 
 				heroId);
 		
-        D3BNetHero hero = restTemplate.getForObject(urlString, D3BNetHero.class);
-        return hero;
+        return restTemplate.getForObject(urlString, D3BNetHero.class);
 	}
-	
-	@Autowired
-	private RestTemplate restTemplate;
 }

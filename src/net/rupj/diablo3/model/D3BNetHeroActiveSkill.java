@@ -6,11 +6,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class D3BNetHeroActiveSkill {
 
 	private D3BNetHeroSkill skill;
-	private D3BNetHeroSkill rune;
+	private D3BNetHeroSkillRune rune;
+
 	public D3BNetHeroSkill getSkill() {
 		return skill;
 	}
-	public D3BNetHeroSkill getRune() {
+	public D3BNetHeroSkillRune getRune() {
 		return rune;
 	}
 

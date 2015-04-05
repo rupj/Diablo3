@@ -12,7 +12,10 @@ import org.springframework.stereotype.Component;
 
 @Component 
 public class Diablo3Runner {
-	
+
+	@Autowired
+	private D3BNetServiceV2 d3BNetServiceV2;
+
 	public Diablo3Runner() {
 		System.out.println("Creating bean Diablo3Runner");
 	}
@@ -29,7 +32,4 @@ public class Diablo3Runner {
 		
 		//System.out.println(d3BNetServiceV2.retrieveHeroById(profileId, heroId).toString());
 	}
-	
-	@Autowired
-	private D3BNetServiceV2 d3BNetServiceV2;
 }
